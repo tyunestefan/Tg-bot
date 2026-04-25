@@ -170,8 +170,7 @@ async def top_cities(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     await update.message.reply_text(
         "🏙 *Топ-10 самых населённых городов мира:*\n\n" +
-        "\n".join(top) +
-        "\n\n_(данные на 2024 год)_",
+        "\n".join(top),
         parse_mode="Markdown"
     )
 
@@ -191,8 +190,7 @@ async def top_countries(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     await update.message.reply_text(
         "🌍 *Топ-10 самых населённых стран мира:*\n\n" +
-        "\n".join(top) +
-        "\n\n_(данные на 2024 год)_",
+        "\n".join(top),
         parse_mode="Markdown"
     )
 
@@ -215,8 +213,7 @@ async def search(update: Update, context: ContextTypes.DEFAULT_TYPE):
         name, population = POPULATION_DATA[key]
         await update.message.reply_text(
             f"📍 *{name}*\n\n"
-            f"👥 Население: *{population} чел.*\n\n"
-            f"_(данные на 2024 год)_",
+            f"👥 Население: *{population} чел.*",
             parse_mode="Markdown"
         )
     else:
